@@ -1,0 +1,34 @@
+// is the indicator for an in line comment
+
+/* is the indicator for the start of a multi line comment
+
+*/ is the indicator for the end of a multi line comment
+
+/* this is an example of a multi line comment */
+
+# is used for special statements
+
+for example, when we are importing header files, those calls look like this
+
+    #include <iostream>
+    #include <cmath>
+
+every single program written in c++ must have a main function
+this function must have a return type of indicator
+
+All functions and variables in c++ programs must be given a type
+    examples of types are:
+        -void (no return value)
+        -int (integer)
+        -bool (boolean value)
+        -float (floating point value)
+        -double (float value with more bytes of memory)
+        -char (character)
+
+There are shortcuts that can be done in c++ similar to python
+one example of this is 
+    using namespace std;
+
+    this allows us to use functions such as std::cin or std::cout without writing std::
+
+    this can lead to problems with objects defined by the user having the same name as std:: functions
