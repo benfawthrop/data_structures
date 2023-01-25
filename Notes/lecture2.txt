@@ -1,0 +1,17 @@
+1.12
+
+    For and While loops
+        here is a basic example in c++
+
+            for (expr1; expr2; expr3)
+                statement;
+            
+        - expr1; 
+            is the initial expression executed at the start before the loop iterations begin;
+        – expr2;
+            is the test applied before the beginning of each loop iteration, the loop ends when this expression
+            evaluates to false or 0;
+        – expr3;
+            is evaluated at the very end of each iteration;
+        – statement 
+            is the “loop body”

@@ -1,0 +1,21 @@
+
+The basic ideas behind classes are data abstraction and encapsulation
+    - in many cases when we are using a class, we dont knwo exactly how that memory is structured.
+    instead, what we really think about what operations are available
+    - data abstraction hides details that dont matter from the end user and idnetifies 
+    details that do matter
+    - the user sees only the interface to the object: the collection of externally-visible
+    data and operations
+    - encapsulation is the packing of data and junctions into a single component
+
+Information hiding
+    - users have access to interface, but not implementation- no data item should be available any more
+    than absolutely necessary
+
+C++ classes
+    * A C++ class consists of
+        - a collection of member variables, usually private and
+        - a collection of member functions, ususally public, which operate on these variables
+    * public member functions can be accessed directly from outside the class
+    * private member functions and member variables can only beaccessed indirectly from outside the class
+    through public member functions
