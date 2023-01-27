@@ -25,7 +25,7 @@ class Player {
         void addPen(std::string penalty_name = "");
 
         // misc
-        void printPlayer(int longest_player_name, std::ofstream& outfile); // prints player stats on a line according to the formatting provided in the document
+        void printPlayer(int longest_player_name, int longest_team_name, std::ofstream& outfile); // prints player stats on a line according to the formatting provided in the document
 
 
     private:

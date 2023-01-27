@@ -10,7 +10,7 @@
 class Team {
     public:
         // constructor
-        Team(const std::string _team = "");
+        Team(const std::string& _team = "");
 
         // getters
         int getGoals() const; // returns number of goals
@@ -23,10 +23,10 @@ class Team {
         double getWinPct() const; // returns the win percentage of the team
 
         // setters
-        void addGoal(); // increments the goal counter
-        void addPen(); // increments the penalty counter
+        void addGoal(int num_goals = 1); // increments the goal counter
+        void addPen(int num_pens = 1); // increments the penalty counter
         void addWin(); // increments the win counter
-        void addLoss(); // increments the loss counter
+        void addLoss(int num_loss = 1); // increments the loss counter
         void addTie(); // increments the tie counter
         void addPlayer(Player& p); // adds a player class object to the `players` vector
 

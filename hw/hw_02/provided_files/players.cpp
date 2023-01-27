@@ -51,18 +51,23 @@ void Player::addPen(std::string penalty_name){
 }
 
 // misc
-void Player::printPlayer(int longest_player_name, std::ofstream& outfile){
+void Player::printPlayer(int longest_player_name, int longest_team_name, std::ofstream& outfile){
     // prints player stats on a line according to the formatting provided in the document
-    outfile << name << std::setw(longest_player_name + 2 + team.size()) << team;
-    outfile << std::setw(longest_player_name + 2 + 18) << goals << std::setw(longest_player_name + 2 + 27);
-    outfile << assists << std::setw(longest_player_name + 2 + 38) << num_pens << std::endl;
+    outfile << name << std::setw((longest_player_name - name.size()) + 2 + team.size()) << team;
+    outfile << std::setw((longest_team_name - team.size()) + 8) << goals << std::setw(9);
+    outfile << assists << std::setw(11) << num_pens << std::endl;
 
 }
 
 bool operator< (const Player& left, const Player& right){
     // this is the < operator.  it will be utilized in the sort function
-    if ((left.getGoals() + left.getAssists()) < (right.getGoals() + right.getAssists())){
+    if ((left.getGoals() + left.getAssists()) > (right.getGoals() + right.getAssists())){
         return true;
+    } else if ((left.getGoals() + left.getAssists()) == (right.getGoals() + right.getAssists())){
+        if (left.getPens() == right.getPens()) {
+            return (left.getName() < right.getName());
+        }
+        return (left.getPens() < right.getPens());
     } else{
         return false;
     }
