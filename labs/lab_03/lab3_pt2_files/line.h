@@ -15,16 +15,10 @@ public:
 private:
     Point a,b;
 };
-
-
 // A helper function to print a Line.
 std::ostream& operator<< (std::ostream &ostr, const Line &l);
-
-
 // A helper function to gradient of a line.
 double gradient(const Line &ln);
-
-
 // A helper function to compare the gradient of two Lines.
 // (That can be used to sort a collection of roads.)
 bool steeper_gradient(const Line &m, const Line &n);
