@@ -9,6 +9,7 @@
 #include "inventory.h"
 
 
+class Inventory;
 class Customer {
 public:
     // constructor
@@ -18,16 +19,23 @@ public:
     }
 
     // getters
-    int getID() { return id; }
-    std::string getName() { return name; }
-    bool isIn(std::list<Customer*> c_list);
+    int getID() { return id; } // returns customer ID
+    std::string getName() { return name; } // returns cust name
+    // checks to see if this customer is in a given list
+    bool isIn(std::list<Customer*>& c_list);
+    // returns the list of rented items
     std::list<Inventory*> getRenting() { return items_renting; }
+    // returns the list of queued items
     std::list<Inventory*> getQueue() { return items_queued; }
+    // returns an iterator which holds the place in a list for a given item
+    std::list<Inventory*>::iterator findPlace(
+            Inventory& id_to_check, std::list<Inventory*>& list_to_check);
 
     // setters
-    void rent(Inventory* item_to_rent);
-    void queue(Inventory* item_to_rent);
-    void returnItem(Inventory* item_to_ret);
+    void rent(Inventory* item_to_rent); // rents an item
+    void queue(Inventory* item_to_rent); // queues a given item
+    void returnItem(Inventory* item_to_ret); // returns an item from the rental list
+    void removePending() { items_queued.pop_front(); } // removes the first queued item
 
 private:
     std::list<Inventory*> items_renting; // list of all items the consumer is currently renting
@@ -36,6 +44,7 @@ private:
     std::string name; // stores the customer name
 };
 
-std::ostream& operator<< (std::ostream& out, const Customer& cust);
+// overloaded << operator for printing a customer
+std::ostream& operator<< (std::ostream& out, Customer& cust);
 
 #endif //_ds_customers_

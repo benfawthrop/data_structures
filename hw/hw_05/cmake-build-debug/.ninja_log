@@ -1,0 +1,6 @@
+# ninja log v5
+340	377	1677287765255955983	hw_05	27ac13afff158837
+1	312	1677287731784920121	CMakeFiles/hw_05.dir/provided_files/traincar.cpp.o	7ec544501bd1a53c
+1	340	1677287765217289043	CMakeFiles/hw_05.dir/provided_files/main.cpp.o	5ca1c70e86b82b28
+1	27	1677176264365805472	CMakeFiles/hw_05.dir/provided_files/mtrand.cpp.o	7af9ca083e8221ef
+0	41	1678161392764682987	build.ninja	125983d15f770e31
